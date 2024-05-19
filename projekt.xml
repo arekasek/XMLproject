@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<football>
+    <myFavoriteClubs>
+        <club TeamID="1" name="Real Madrid">
+
+            <fullTeamName>Real Madrid Club de Fútbol</fullTeamName>
+            <stadium capacity="81044" location="Chamartín district">Estadio Santiago Bernabéu</stadium>
+            <country>Spain</country>
+            <league level="1">La Liga</league>
+            <clubWebsite>https://www.realmadrid.com/en-US</clubWebsite>
+
+            <myFavoritePlayers>
+            <captain>
+                <player id="1" name="Nacho Fernández" position="Defender" age="34">
+                <nationality>Spain</nationality>
+                <shirtNumber>6</shirtNumber>
+                <gender>male</gender>
+                <statistics season="2023/24">
+                    <numberOfMatches wasInjured="no">26</numberOfMatches>
+                    <goals>2</goals>
+                    <assists>1</assists>
+                    <cardPenalties>
+                        <redCards>2</redCards>
+                        <yellowCards>3</yellowCards>
+                    </cardPenalties>
+                </statistics>
+
+                <image>NachoFernandez.jpg</image>
+                <playerInfo>https://pl.wikipedia.org/wiki/Nacho</playerInfo>
+                </player>
+            </captain>
+
+            <player id="2" name="Vinicius Júnior" position="Striker" age="24">
+                <nationality>Brazil</nationality>
+                <shirtNumber>7</shirtNumber>
+                <gender>male</gender>
+                <statistics season="2023/24">
+                    <numberOfMatches wasInjured="yes">24</numberOfMatches>
+                    <goals>21</goals>
+                    <assists>11</assists>
+                    <cardPenalties>
+                        <redCards>6</redCards>
+                        <yellowCards>0</yellowCards>
+                    </cardPenalties>
+                </statistics>
+
+                <image>Vinicius.jpg</image>
+                <playerInfo>https://pl.wikipedia.org/wiki/Vin%C3%ADcius_J%C3%BAnior</playerInfo>
+            </player>
+
+            <player id="3" name="Luka Modrić" position="Midfielder" age="37">
+                <nationality>Croatia</nationality>
+                <shirtNumber>10</shirtNumber>
+                <gender>male</gender>
+                <statistics season="2023/24">
+                    <numberOfMatches wasInjured="no">30</numberOfMatches>
+                    <goals>2</goals>
+                    <assists>6</assists>
+                    <cardPenalties>
+                        <redCards>0</redCards>
+                        <yellowCards>2</yellowCards>
+                    </cardPenalties>
+                </statistics>
+
+                <image>LukaModric.jpg</image>
+                <playerInfo>https://pl.wikipedia.org/wiki/Luka_Modri%C4%87</playerInfo>
+            </player>
+            </myFavoritePlayers>
+
+            <additionalInfo>
+                <ranking>1st</ranking>
+                <yearFounded>1902</yearFounded>
+                <manager>Carlo Ancelotti</manager>
+            </additionalInfo>
+
+            <clubLegends>
+                <bestGoalScorer amount="450">Cristiano Ronaldo</bestGoalScorer>
+                <bestAssistant amount="165">Karim Benzema</bestAssistant>
+                <bestGoalkeeper>Iker Casillas</bestGoalkeeper>
+            </clubLegends>
+        </club>
+
+
+        <club TeamID="2" name="Cardiff City">
+
+            <fullTeamName>Cardiff City Football Club</fullTeamName>
+            <stadium capacity="33316" location="Leckwith Rd">Cardiff City Stadium</stadium>
+            <country>Wales</country>
+            <league level="2">Championship</league>
+            <clubWebsite>https://www.cardiffcityfc.co.uk/</clubWebsite>
+
+            <myFavoritePlayers>
+            <captain>
+                <player id="4" name="Joe Ralls" position="Midfielder" age="30">
+                <nationality>England</nationality>
+                <shirtNumber>8</shirtNumber>
+                <gender>male</gender>        
+                <statistics season="2023/24">
+                    <numberOfMatches wasInjured="no">35</numberOfMatches>
+                    <goals>1</goals>
+                    <assists>7</assists>
+                    <cardPenalties>
+                        <redCards>0</redCards>
+                        <yellowCards>3</yellowCards>
+                    </cardPenalties>
+                </statistics>
+
+                <image>JoeRalls.jpg</image>
+                <playerInfo>https://en.wikipedia.org/wiki/Joe_Ralls</playerInfo>
+                </player>
+            </captain>
+
+            <player id="5" name="Aaron Ramsey" position="Midfielder" age="33">
+                <nationality>Wales</nationality>
+                <shirtNumber>10</shirtNumber>
+                <gender>male</gender>
+                <statistics season="2023/24">
+                    <numberOfMatches wasInjured="yes">16</numberOfMatches>
+                    <goals>3</goals>
+                    <assists>0</assists>
+                    <cardPenalties>
+                        <redCards>2</redCards>
+                        <yellowCards>0</yellowCards>
+                    </cardPenalties>
+                </statistics>
+
+                <image>Ramsey.jpg</image>
+                <playerInfo>https://pl.wikipedia.org/wiki/Aaron_Ramsey</playerInfo>
+            </player>
+
+            <player id="3" name="Callum Robinson" position="Striker" age="29">
+                <nationality>Ireland</nationality>
+                <shirtNumber>47</shirtNumber>
+                <gender>male</gender>
+                <statistics season="2023/24">
+                    <numberOfMatches wasInjured="no">23</numberOfMatches>
+                    <goals>2</goals>
+                    <assists>2</assists>
+                    <cardPenalties>
+                        <redCards>0</redCards>
+                        <yellowCards>0</yellowCards>
+                    </cardPenalties>
+                </statistics>
+
+                <image>Robinson.jpg</image>
+                <playerInfo>https://en.wikipedia.org/wiki/Callum_Robinson</playerInfo>
+            </player>
+
+            </myFavoritePlayers>
+
+            <additionalInfo>
+                <ranking>10th</ranking>
+                <yearFounded>1899</yearFounded>
+                <manager>Erol Bulut</manager>
+            </additionalInfo>
+
+            <clubLegends>
+                <bestGoalScorer amount="381">Peter Whittingham</bestGoalScorer>
+                <bestAssistant amount="72">Peter Whittingham</bestAssistant>
+                <bestGoalkeeper>David Marshall</bestGoalkeeper>
+            </clubLegends>
+        </club>
+
+    </myFavoriteClubs>
+</football>
