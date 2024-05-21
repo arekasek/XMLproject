@@ -9,23 +9,33 @@
             <league level="1">La Liga</league>
             <clubWebsite>https://www.realmadrid.com/en-US</clubWebsite>
 
+            <contact>
+                <email>atencionpublico@corp.realmadrid.com</email>
+                <phoneNumber>+34 913984300</phoneNumber>
+            </contact>
+
+            <rivalClubs>
+                <rivalClub>FC Barcelona</rivalClub>
+                <rivalClub>Atletico Madrid</rivalClub>
+            </rivalClubs>
+
             <myFavoritePlayers>
             <captain>
                 <player id="1" name="Nacho Fernández" position="Defender" age="34">
                 <nationality>Spain</nationality>
-                <shirtNumber>6</shirtNumber>
+                <shirtNumber>06</shirtNumber>
                 <gender>male</gender>
                 <statistics season="2023/24">
                     <numberOfMatches wasInjured="no">26</numberOfMatches>
-                    <goals>2</goals>
-                    <assists>1</assists>
+                    <goals>02</goals>
+                    <assists>01</assists>
                     <cardPenalties>
-                        <redCards>2</redCards>
-                        <yellowCards>3</yellowCards>
+                        <redCards>02</redCards>
+                        <yellowCards>03</yellowCards>
                     </cardPenalties>
                 </statistics>
 
-                <image>NachoFernandez.jpg</image>
+                <image source="img/NachoFernandez.jpg">NachoFernandez.jpg</image>
                 <playerInfo>https://pl.wikipedia.org/wiki/Nacho</playerInfo>
                 </player>
             </captain>
@@ -39,12 +49,12 @@
                     <goals>21</goals>
                     <assists>11</assists>
                     <cardPenalties>
-                        <redCards>6</redCards>
-                        <yellowCards>0</yellowCards>
+                        <redCards>06</redCards>
+                        <yellowCards>00</yellowCards>
                     </cardPenalties>
                 </statistics>
 
-                <image>Vinicius.jpg</image>
+                <image source="img/Vinicius.jpg">Vinicius.jpg</image>
                 <playerInfo>https://pl.wikipedia.org/wiki/Vin%C3%ADcius_J%C3%BAnior</playerInfo>
             </player>
 
@@ -54,15 +64,15 @@
                 <gender>male</gender>
                 <statistics season="2023/24">
                     <numberOfMatches wasInjured="no">30</numberOfMatches>
-                    <goals>2</goals>
-                    <assists>6</assists>
+                    <goals>02</goals>
+                    <assists>06</assists>
                     <cardPenalties>
-                        <redCards>0</redCards>
-                        <yellowCards>2</yellowCards>
+                        <redCards>00</redCards>
+                        <yellowCards>02</yellowCards>
                     </cardPenalties>
                 </statistics>
 
-                <image>LukaModric.jpg</image>
+                <image source="img/LukaModric.jpg">LukaModric.jpg</image>
                 <playerInfo>https://pl.wikipedia.org/wiki/Luka_Modri%C4%87</playerInfo>
             </player>
             </myFavoritePlayers>
@@ -76,7 +86,12 @@
             <clubLegends>
                 <bestGoalScorer amount="450">Cristiano Ronaldo</bestGoalScorer>
                 <bestAssistant amount="165">Karim Benzema</bestAssistant>
-                <bestGoalkeeper>Iker Casillas</bestGoalkeeper>
+                <bestGoalkeeper>
+                    <goalkeeperName>Iker Casillas</goalkeeperName>
+                    <savePercentage>75.9</savePercentage>
+                    <cleanSheets>238</cleanSheets>
+                </bestGoalkeeper>
+                <others>Zidane Raul Beckham</others>
             </clubLegends>
         </club>
 
@@ -89,6 +104,15 @@
             <league level="2">Championship</league>
             <clubWebsite>https://www.cardiffcityfc.co.uk/</clubWebsite>
 
+            <contact>
+                <email>club@cardiffcityfc.co.uk</email>
+                <phoneNumber>+44 333111927</phoneNumber>
+            </contact>
+
+            <rivalClubs>
+                <rivalClub>Swansea City</rivalClub>
+            </rivalClubs>
+
             <myFavoritePlayers>
             <captain>
                 <player id="4" name="Joe Ralls" position="Midfielder" age="30">
@@ -97,15 +121,15 @@
                 <gender>male</gender>        
                 <statistics season="2023/24">
                     <numberOfMatches wasInjured="no">35</numberOfMatches>
-                    <goals>1</goals>
-                    <assists>7</assists>
+                    <goals>01</goals>
+                    <assists>07</assists>
                     <cardPenalties>
-                        <redCards>0</redCards>
-                        <yellowCards>3</yellowCards>
+                        <redCards>00</redCards>
+                        <yellowCards>03</yellowCards>
                     </cardPenalties>
                 </statistics>
 
-                <image>JoeRalls.jpg</image>
+                <image source="img/JoeRalls.jpg">JoeRalls.jpg</image>
                 <playerInfo>https://en.wikipedia.org/wiki/Joe_Ralls</playerInfo>
                 </player>
             </captain>
@@ -116,15 +140,15 @@
                 <gender>male</gender>
                 <statistics season="2023/24">
                     <numberOfMatches wasInjured="yes">16</numberOfMatches>
-                    <goals>3</goals>
-                    <assists>0</assists>
+                    <goals>03</goals>
+                    <assists>00</assists>
                     <cardPenalties>
-                        <redCards>2</redCards>
-                        <yellowCards>0</yellowCards>
+                        <redCards>02</redCards>
+                        <yellowCards>00</yellowCards>
                     </cardPenalties>
                 </statistics>
 
-                <image>Ramsey.jpg</image>
+                <image source="img/Ramsey.jpg">Ramsey.jpg</image>
                 <playerInfo>https://pl.wikipedia.org/wiki/Aaron_Ramsey</playerInfo>
             </player>
 
@@ -134,15 +158,15 @@
                 <gender>male</gender>
                 <statistics season="2023/24">
                     <numberOfMatches wasInjured="no">23</numberOfMatches>
-                    <goals>2</goals>
-                    <assists>2</assists>
+                    <goals>02</goals>
+                    <assists>02</assists>
                     <cardPenalties>
-                        <redCards>0</redCards>
-                        <yellowCards>0</yellowCards>
+                        <redCards>00</redCards>
+                        <yellowCards>00</yellowCards>
                     </cardPenalties>
                 </statistics>
 
-                <image>Robinson.jpg</image>
+                <image source="img/Robinson.jpg">Robinson.jpg</image>
                 <playerInfo>https://en.wikipedia.org/wiki/Callum_Robinson</playerInfo>
             </player>
 
@@ -157,7 +181,11 @@
             <clubLegends>
                 <bestGoalScorer amount="381">Peter Whittingham</bestGoalScorer>
                 <bestAssistant amount="72">Peter Whittingham</bestAssistant>
-                <bestGoalkeeper>David Marshall</bestGoalkeeper>
+                <bestGoalkeeper>
+                    <goalkeeperName>David Marshall</goalkeeperName>
+                    <savePercentage>71.4</savePercentage>
+                    <cleanSheets>169</cleanSheets>
+                </bestGoalkeeper>
             </clubLegends>
         </club>
 
