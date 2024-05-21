@@ -12,7 +12,6 @@
     <xs:complexType name="clubType">
         <xs:sequence>
             <xs:element name="fullTeamName" type="xs:string"/>
-            
             <xs:element name="stadium">
                 <xs:complexType>
                     <xs:simpleContent>
@@ -22,33 +21,151 @@
                         </xs:extension>
                     </xs:simpleContent>
                 </xs:complexType>
-
             </xs:element>
-            <xs:element name="country" type="xs:string"/>
+
+            <xs:element name="country">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:pattern value="[A-Z][a-z]*"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
 
             <xs:element name="league">
                 <xs:complexType>
                     <xs:simpleContent>
                         <xs:extension base="xs:string">
-                            <xs:attribute name="level" type="xs:integer" use="required"/>
+                            <xs:attribute name="level" use="required">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:integer">
+                                        <xs:enumeration value="1"/>
+                                        <xs:enumeration value="2"/>
+                                        <xs:enumeration value="3"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:attribute>
                         </xs:extension>
                     </xs:simpleContent>
                 </xs:complexType>
             </xs:element>
 
-            <xs:element name="clubWebsite" type="xs:string"/>
+            <xs:element name="clubWebsite" type="xs:anyURI" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="contact" type="contactType" minOccurs="1" maxOccurs="1"/>
+
+            <xs:element name="rivalClubs">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="rivalClub" type="xs:string" minOccurs="1" maxOccurs="2"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+
             <xs:element name="myFavoritePlayers" type="myFavoritePlayersType"/>
             <xs:element name="additionalInfo" type="additionalInfoType"/>
+            
+            <xs:element name="clubLegends">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="bestGoalScorer" minOccurs="1" maxOccurs="1">
+                            <xs:complexType>
+                                 <xs:simpleContent>
+                                    <xs:extension base="xs:string">
+                                        <xs:attribute ref="amount"/>
+                                    </xs:extension>
+                                </xs:simpleContent>
+                            </xs:complexType>
+                        </xs:element>
+
+                        <xs:element name="bestAssistant" minOccurs="1" maxOccurs="1">
+                            <xs:complexType>
+                                 <xs:simpleContent>
+                                    <xs:extension base="xs:string">
+                                        <xs:attribute ref="amount"/>
+                                    </xs:extension>
+                                </xs:simpleContent>
+                            </xs:complexType>
+                        </xs:element>
+
+                        <xs:element name="bestGoalkeeper" type="bestGoalkeeperExtendedType"/>
+                        <xs:element name="others" minOccurs="0" maxOccurs="1">
+                            <xs:simpleType>
+                                <xs:list itemType="playerNameType"/>
+                            </xs:simpleType>
+                        </xs:element>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
 
         </xs:sequence>
         <xs:attributeGroup ref="clubInfo"/>
     </xs:complexType>
 
+    <xs:complexType name="bestGoalkeeperType">
+        <xs:sequence>
+            <xs:element name="goalkeeperName" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="bestGoalkeeperExtendedType">
+        <xs:complexContent>
+            <xs:extension base="bestGoalkeeperType">
+                <xs:sequence>
+                    <xs:element name="savePercentage" type="xs:decimal"/>
+                    <xs:element name="cleanSheets" type="xs:integer"/>
+                  </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:simpleType name="playerNameType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Zidane"/>
+            <xs:enumeration value="Raul"/>
+            <xs:enumeration value="Beckham"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:attribute name="amount">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:pattern value="\d{1,3}"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:attribute>
+
+    <xs:complexType name="contactType">
+        <xs:sequence>
+            <xs:element name="email">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:pattern value=".+@.+\..+"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="phoneNumber">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:pattern value="\+\d{2}\s\d{9}"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    
+
     <xs:complexType name="additionalInfoType">
         <xs:sequence>
             <xs:element name="ranking" type="rankingType"/>
-            <xs:element name="yearFounded" type="xs:positiveInteger"/>
-            <xs:element name="manager" type="xs:string"/>
+            <xs:element name="yearFounded" type="xs:gYear"/>
+            <xs:element name="manager">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:whiteSpace value="collapse"/>
+                        <xs:pattern value="[A-Z][a-z]+(\s[A-Z][a-z]+)*"/>
+                    </xs:restriction>    
+                </xs:simpleType>
+            </xs:element>
         </xs:sequence>
     </xs:complexType>
 
@@ -60,14 +177,7 @@
     </xs:complexType>
 
     <xs:complexType name="playerType">
-        <xs:sequence>
-            <xs:element name="nationality" type="shortString"/>
-            <xs:element name="shirtNumber" type="shirtNumberType"/>
-            <xs:element name="gender" type="genderType"/>
-            <xs:element name="statistics" type="statisticsType"/>
-            <xs:element name="image" type="xs:string"/>
-            <xs:element name="playerInfo" type="xs:string"/>
-        </xs:sequence>
+        <xs:group ref="PlayerInfo"/>
         <xs:attribute name="id" type="xs:positiveInteger"/>
         <xs:attribute name="name" type="xs:string"/>
         <xs:attribute name="position" type="shortString"/>
@@ -121,7 +231,25 @@
         <xs:attribute name="TeamID" type="xs:integer" use="required"/>
         <xs:attribute name="name" type="longString" use="required"/>
     </xs:attributeGroup>
-    <!-- GLOBALNE TYPY PROSTE -->
+
+    <xs:group name="PlayerInfo">
+        <xs:sequence>
+            <xs:element name="nationality" type="shortString"/>
+            <xs:element name="shirtNumber" type="shirtNumberType"/>
+            <xs:element name="gender" type="genderType"/>
+            <xs:element name="statistics" type="statisticsType"/>
+            <xs:element name="image">
+                <xs:complexType>
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute name="source" type="xs:string" use="required"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="playerInfo" type="xs:anyURI"/>
+        </xs:sequence>
+    </xs:group>
 
     <xs:simpleType name="rankingType">
         <xs:union>
@@ -154,10 +282,9 @@
         </xs:restriction>
     </xs:simpleType>
     
-    <xs:simpleType name="amountOfType"> 
-        <xs:restriction base="xs:nonNegativeInteger">
-            <xs:minInclusive value="0"/>
-            <xs:maxInclusive value="50"/>
+    <xs:simpleType name="amountOfType">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[0-8][0-9]"/>
         </xs:restriction>
     </xs:simpleType>
 
